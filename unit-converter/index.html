@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unit Converter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Times New Roman", Times, serif;
+      }
+      body {
+        background-color: lightblue;
+        width: 100%;
+        
+        padding: 20px;
+      }
+      section {
+        margin: 0 auto;
+        max-width: 1280px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+      }
+      h1 {
+        padding: 20px;
+        background-color: #ffffff;
+        font-size: 32px;
+        font-weight: 700;
+        border-radius: 5px;
+        text-align: start;
+        margin-bottom: 30px;
+      }
+      form {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      input[type="number"] {
+        padding: 5px 6px;
+        text-align: start;
+
+      }
+      select {
+        padding: 3px 6px;
+        font-size: 16px;
+        
+      }
+      button {
+        padding: 4px 7px;
+        
+      }
+      input,
+      select,
+      button {
+        border-radius: 5px;
+        border: 2px solid lightgray;
+      }
+      p {
+        background-color: magenta;
+        color: white;
+        border-radius: 5px;
+        width: 200px;
+        font-size: 18px;
+        padding: 5px;
+      }
+      @media(max-width: 400px) {
+        h1 {
+          font-size: 14px;
+          white-space: nowrap;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Unit Converter</h1>
+      <form>
+        <input
+          type="number"
+          name="userinput"
+          id="userinput"
+          placeholder="Enter a Number..."
+        />
+        <select name="unit" id="unit">
+          <option value="miles to kilometers">Miles to Kilometers</option>
+          <option value="kilometers to miles">Kilometers to Miles</option>
+        </select>
+        <button type="button" onclick="unitConverter()">Convert</button>
+        <p id="secret">Result: 0</p>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
